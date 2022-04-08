@@ -4,9 +4,13 @@ import { Button } from 'react-bootstrap';
 import './MyComponent.css'
 
 class MyComponent extends React.Component {
-  state = {
-    status: true,
-    form: ''
+  constructor(props) {
+    super(props);
+  
+    this.state = {
+      status: false,
+      form: '',
+    };
   }
 
   componentDidMount () {
@@ -19,10 +23,7 @@ class MyComponent extends React.Component {
 
   onChangeInput = (event) => {
     console.log(event.target.value)
-    const numberOnly = event.target.value === '1'
-    if(numberOnly){
-      this.setState({form: event.target.value})
-    }
+    this.setState({form: event.target.value})
   }
 
   render () {
