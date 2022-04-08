@@ -41,7 +41,8 @@ class MyComponent extends React.Component {
               </div>
           }
         </div>
-        
+        <br />
+
         <Button variant="secondary" onClick={this.onClickMe}>Togle</Button>
         <br />
         <br />
